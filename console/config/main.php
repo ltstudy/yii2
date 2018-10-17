@@ -31,6 +31,19 @@ return [
             ],
         ],
     ],
+
+    'class'=>'tsingsun\swoole\server\HttpServer',
+    'setting' => [
+        'daemonize'=>1,
+        'reactor_num'=>1,
+        'worker_num'=>1,
+        'pid_file' => __DIR__ . '/../runtime/http.pid',
+        'log_file' => __DIR__.'/../runtime/logs/swoole.log',
+        'debug_mode'=> 1,
+        'user'=>'tsingsun',
+        'group'=>'staff',
+    ],
+
 //    // webSocket
 //    'websocket' => [
 //        'class' => 'jianyan\websocket\WebSocketController',
