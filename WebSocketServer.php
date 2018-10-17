@@ -26,8 +26,8 @@ Server::run($config,function (Server $server){
             require(__DIR__ . '/console/config/main.php'),
             require(__DIR__ . '/console/config/main-local.php')
         );
-        Yii::setAlias('@webroot', WEBROOT);
-        Yii::setAlias('@web', '/');
+        \Yii::setAlias('@webroot', WEBROOT);
+        \Yii::setAlias('@web', '/');
         $bootstrap->appConfig = $config;
     };
     $starter->formatData = function ($data) {
