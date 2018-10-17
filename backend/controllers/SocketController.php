@@ -3,7 +3,7 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-//use jianyan\websocket\server;
+use jianyan\websocket\server;
 Class SocketController extends Controller{
     const HOST = '0.0.0.0';
     const PORT = 9501;
