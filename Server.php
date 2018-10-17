@@ -25,8 +25,8 @@ $config = [
         'pid_file' => __DIR__ . 'console/runtime/testHttp.pid',
         'log_file' => __DIR__.'console/runtime/logs/swoole.log',
         'debug_mode'=> 1,
-//        'user'=>'tsingsun',
-//        'group'=>'staff',
+        'user'=>'tsingsun',
+        'group'=>'staff',
         // 4.0 新增选项
 //        'enable_coroutine' => COROUTINE_ENV
     ],
