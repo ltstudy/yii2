@@ -58,7 +58,7 @@ Class SocketController extends Controller{
 
     public function actionIndex()
     {
-        $ws = new swoole_server(self::HOST, self::PORT);
+        $ws = new Swoole\WebSocket\Server(self::HOST, self::PORT);
 
         var_dump($ws);
     }
