@@ -2,9 +2,9 @@
 namespace backend\controllers;
 
 use Yii;
-//use yii\web\Controller;
+use yii\web\Controller;
 
-Class SocketController {
+Class SocketController extends Controller{
     const HOST = '0.0.0.0';
     const PORT = 9501;
 
