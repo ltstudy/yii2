@@ -22,18 +22,18 @@ $config = [
         'reactor_num'=>1,
         'worker_num'=>1,
         'task_worker_num'=>1,
-        'pid_file' => __DIR__ . 'console/runtime/testHttp.pid',
-        'log_file' => __DIR__.'console/runtime/logs/swoole.log',
+        //'pid_file' => __DIR__ . 'console/runtime/testHttp.pid',
+        //'log_file' => __DIR__.'console/runtime/logs/swoole.log',
         'debug_mode'=> 1,
-        'user'=>'tsingsun',
-        'group'=>'staff',
+//        'user'=>'tsingsun',
+//        'group'=>'staff',
         // 4.0 新增选项
 //        'enable_coroutine' => COROUTINE_ENV
     ],
 ];
 
 
-Server::run($config,function (Server $server){
+Server::run($config,function (Server $server) {
     $starter = new \tsingsun\swoole\bootstrap\WebApp($server);
     //初始化函数独立,为了在启动时,不会加载Yii相关的文件,在库更新时采用reload平滑启动服务器
     $starter->init = function (\tsingsun\swoole\bootstrap\BaseBootstrap $bootstrap) {
