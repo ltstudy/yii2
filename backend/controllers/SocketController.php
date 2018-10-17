@@ -12,7 +12,7 @@ Class SocketController extends Controller{
     private $sw;
 
     /**
-     * 原生测试连接swoole
+     * 连接websock
      * @return [type] [deception]
      */
 
@@ -57,10 +57,7 @@ Class SocketController extends Controller{
 
     public function actionIndex()
     {
-        $swoole = new server();
-
-        var_dump($swoole);
-
+        return '你好';
     }
 
 //    public function __construct()
