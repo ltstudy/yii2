@@ -22,13 +22,13 @@ $config = [
         'reactor_num'=>1,
         'worker_num'=>1,
         'task_worker_num'=>1,
-        'pid_file' => __DIR__ . '/../runtime/testHttp.pid',
-        'log_file' => __DIR__.'/../runtime/logs/swoole.log',
+//        'pid_file' => __DIR__ . '/../runtime/testHttp.pid',
+//        'log_file' => __DIR__.'/../runtime/logs/swoole.log',
         'debug_mode'=> 1,
         'user'=>'tsingsun',
         'group'=>'staff',
         // 4.0 新增选项
-        'enable_coroutine' => COROUTINE_ENV
+//        'enable_coroutine' => COROUTINE_ENV
     ],
 ];
 
@@ -40,8 +40,8 @@ Server::run($config,function (Server $server){
         require(__DIR__ . '/vendor/tsingsun/yii2-swoole/src/Yii.php');
         //原项目的配置文件引入
         $config = \yii\helpers\ArrayHelper::merge(
-            require(__DIR__ . '/../config/main.php'),
-            require(__DIR__ . '/../config/main-local.php')
+            require(__DIR__ . '/console/config/main.php'),
+            require(__DIR__ . '/console/config/main-local.php')
         );
         $bootstrap->appConfig = $config;
     };
