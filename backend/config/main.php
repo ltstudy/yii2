@@ -37,6 +37,19 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
+        'urlManager' => [
+            'enablePrettyUrl' => true,  //美化url==ture
+            'enableStrictParsing' => false,  //不启用严格解析
+            'showScriptName' => false,   //隐藏index.php
+            'rules' => [
+                '<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '/m-api/' => '/meanpan-api/index', // 默认index
+                '/mp-api/<action>' => '/meanpan-api/<action>',   // /mp-api/*==>/meanpan-api/*
+            ],
+        ]
+
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
