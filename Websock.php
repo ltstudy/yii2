@@ -23,8 +23,8 @@ Server::run($config,function (Server $server){
         require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
 
         $config = \yii\helpers\ArrayHelper::merge(
-            require(__DIR__ . 'console/config/main.php'),
-            require(__DIR__ . 'console/config/main-local.php')
+            require(__DIR__ . '/console/config/main.php'),
+            require(__DIR__ . '/console/config/main-local.php')
         );
         \Yii::setAlias('@webroot', WEBROOT);
         \Yii::setAlias('@web', '/');
