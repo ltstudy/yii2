@@ -3,7 +3,7 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-
+use jianyan\websocket\server;
 Class SocketController extends Controller{
     const HOST = '0.0.0.0';
     const PORT = 9501;
@@ -54,6 +54,11 @@ Class SocketController extends Controller{
 
     public function actionIndex()
     {
+        $ws = new server\WebSocketServer();
+
+        $ws->run();
+
+
         echo '11111222';
     }
 }
