@@ -51,7 +51,6 @@ Class SocketController extends Controller{
     public function actionClose()
     {
         return 'close';
-        /** @var Application */
 
     }
 
@@ -95,10 +94,10 @@ Class SocketController extends Controller{
 
 
 
-//    public function actionIndex()
-//    {
-//        echo '11111222';
-//    }
+    public function actionIndex()
+    {
+        echo '11111222';
+    }
 }
 
 //new SocketController();
