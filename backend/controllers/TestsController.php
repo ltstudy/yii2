@@ -4,7 +4,7 @@ namespace app\controlles;
 use Yii;
 use yii\web\Controller;
 
-Class WebSocketController extends Controller {
+Class TestsController extends Controller {
 
     public $enableCsrfValidation = false;
 
