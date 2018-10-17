@@ -22,8 +22,8 @@ $config = [
         'reactor_num'=>1,
         'worker_num'=>1,
         'task_worker_num'=>1,
-//        'pid_file' => __DIR__ . '/../runtime/testHttp.pid',
-//        'log_file' => __DIR__.'/../runtime/logs/swoole.log',
+        'pid_file' => __DIR__ . 'console/runtime/testHttp.pid',
+        'log_file' => __DIR__.'console/runtime/logs/swoole.log',
         'debug_mode'=> 1,
         'user'=>'tsingsun',
         'group'=>'staff',
@@ -31,6 +31,7 @@ $config = [
 //        'enable_coroutine' => COROUTINE_ENV
     ],
 ];
+
 
 Server::run($config,function (Server $server){
     $starter = new \tsingsun\swoole\bootstrap\WebApp($server);
