@@ -3,7 +3,7 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use tsingsun\swoole\server;
+use tsingsun\swoole\server\server;
 //use jianyan\websocket\server;
 Class SocketController extends Controller{
     const HOST = '0.0.0.0';
@@ -41,6 +41,7 @@ Class SocketController extends Controller{
     public function actionOpen()
     {
         return 'hello';
+
     }
 
     public function actionMessage()
@@ -54,6 +55,13 @@ Class SocketController extends Controller{
 
     }
 
+    public function actionIndex()
+    {
+        $swoole = new server();
+
+        var_dump($swoole);
+
+    }
 
 //    public function __construct()
 //    {
@@ -94,10 +102,7 @@ Class SocketController extends Controller{
 
 
 
-//    public function actionIndex()
-//    {
-//        echo '11111222';
-//    }
+
 }
 
 //new SocketController();
