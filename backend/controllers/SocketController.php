@@ -3,9 +3,9 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use tsingsun\swoole\server as server;
+//use tsingsun\swoole\server as server;
 //use jianyan\websocket\
-use swoole;
+use Swoole;
 Class SocketController extends Controller{
     const HOST = '0.0.0.0';
     const PORT = 9501;
@@ -58,7 +58,7 @@ Class SocketController extends Controller{
 
     public function actionIndex()
     {
-        $ws = new swoole(self::HOST, self::PORT);
+        $ws = new swoole_server(self::HOST, self::PORT);
 
         var_dump($ws);
     }
