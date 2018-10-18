@@ -50,7 +50,7 @@ Class TestsController extends Controller {
     {
 
         $request = \Yii::$app->request->get('http_server');
-        $request->push(2, "hello-test");
+        $request->push(1, "hello-test");
 //        echo "发送的客户端标示:".$request->fd;
 //
 //        $server->push($request->fd, "hello world");
