@@ -46,8 +46,10 @@ Server::run($config,function (Server $server){
         }
         return json_encode($data);
     };
-    var_dump($starter->formatData );
+
     $server->bootstrap = $starter;
+
+    var_dump($server->bootstrap);
 //    $server->getSwoole()->
     $server->start();
 });
