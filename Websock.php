@@ -11,8 +11,8 @@ $config = [
     'serverType'=>'websocket',
     'port' => 9502,
     'setting' => [
-        'daemonize'=>0,
-        'worker_num'=>1,
+        'daemonize' => 0,
+        'worker_num' => 1,
         'pid_file' => __DIR__ . '/backend/runtime/server.pid',
 
     ],
@@ -48,8 +48,6 @@ Server::run($config,function (Server $server){
     };
 
     $server->bootstrap = $starter;
-
-    var_dump($server->bootstrap);
 //    $server->getSwoole()->
     $server->start();
 });
