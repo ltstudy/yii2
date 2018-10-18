@@ -13,7 +13,7 @@ Class TestsController extends Controller {
 
     public function __construct(Server $serv)
     {
-        $this->serv = $serv;
+        $this->server = $serv;
     }
 
     public function init()
