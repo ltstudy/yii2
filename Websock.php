@@ -14,7 +14,10 @@ $config = [
         'daemonize'=>0,
         'worker_num'=>1,
     ],
+    'pid_file' => __DIR__ . '/console/runtime/testHttp.pid',
+    'log_file' => __DIR__ . '/console/runtime/logs/swoole.log',
 ];
+
 
 Server::run($config,function (Server $server){
     $starter = new \tsingsun\swoole\bootstrap\WebSocketApp($server);
