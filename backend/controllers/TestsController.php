@@ -48,9 +48,9 @@ Class TestsController extends Controller {
      */
     public function actionOpen($server, $request)
     {
-
+        print_r($_GET);
         $request = \Yii::$app->request->get('http_server');
-        $request->push(2, "hello-test");
+        $request->push(2, "hsky-test-data");
 //        echo "发送的客户端标示:".$request->fd;
 //
 //        $server->push($request->fd, "hello world");
