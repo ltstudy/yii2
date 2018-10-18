@@ -46,19 +46,17 @@ Class TestsController extends Controller {
      *
      * @return string
      */
-    public function actionOpen($server, $request)
+    public function actionOpen()
     {
-        print_r($_GET);
-        $request = \Yii::$app->request->get('http_server');
 //        $request->push(2, "hsky-test-data1111123132112321313131");
-        echo "发送的客户端标示:";
+        return  "发送的客户端标示:";
 //
 //        $server->push($request->fd, "hello world");
 
 
     }
     //监听websocket消息事件
-    public function actionMessage($server, $frame)
+    public function actionMessage()
     {
 //        echo "客户端:".$frame->fd."发送了数据,".$frame->data;
 //        $server->push($frame->fd, "Server:{$frame->data}");
