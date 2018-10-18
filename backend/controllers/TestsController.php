@@ -50,8 +50,8 @@ Class TestsController extends Controller {
     {
         print_r($_GET);
         $request = \Yii::$app->request->get('http_server');
-        $request->push(2, "hsky-test-data1111123132112321313131");
-//        echo "发送的客户端标示:".$request->fd;
+//        $request->push(2, "hsky-test-data1111123132112321313131");
+        echo "发送的客户端标示:";
 //
 //        $server->push($request->fd, "hello world");
 
