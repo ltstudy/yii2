@@ -37,7 +37,7 @@ Server::run($config,function (Server $server){
         $bootstrap->appConfig = $config;
     };
 
-    return $starter->init;
+    var_dump($starter->init);
     $starter->formatData = function ($data) {
 
         if($data instanceof \yii\web\ForbiddenHttpException){
