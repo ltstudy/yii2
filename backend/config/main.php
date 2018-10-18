@@ -50,17 +50,17 @@ return [
             ],
         ],
 
-//        'class'=>'tsingsun\swoole\server\HttpServer',
-//        'setting' => [
-//            'daemonize'=>1,
-//            'reactor_num'=>1,
-//            'worker_num'=>1,
-//            'pid_file' => __DIR__ . '../runtime/server.pid',
-//            'log_file' => __DIR__ . '../runtime/swoole.log',
-//            'debug_mode'=> 1,
-//            'user'=>'tsingsun',
-//            'group'=>'staff',
-//        ],
+        'class'=>'tsingsun\swoole\server\HttpServer',
+        'setting' => [
+            'daemonize'=>1,
+            'reactor_num'=>1,
+            'worker_num'=>1,
+            'pid_file' => __DIR__ . '../runtime/server.pid',
+            'log_file' => __DIR__ . '../runtime/swoole.log',
+            'debug_mode'=> 1,
+            'user'=>'tsingsun',
+            'group'=>'staff',
+        ],
 
 //        'webSocket'=>'tsingsun\swoole\server\Server',
 //        'setting' => [
