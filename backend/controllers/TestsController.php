@@ -7,13 +7,13 @@ use tsingsun\swoole\server\Server as Server;
 Class TestsController extends Controller {
 
     public $enableCsrfValidation = false;
-    protected $serv;
+    protected $server;
     const  HOST = "0.0.0.0";
     const  PORT = "9501";
 
-    public function __construct(Server $serv)
+    public function __construct(Server $server)
     {
-        $this->server = $serv;
+        $this->server = $server;
     }
 
     public function init()
