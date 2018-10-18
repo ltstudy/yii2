@@ -33,9 +33,9 @@ Class TestsController extends Controller {
      *
      * @return string
      */
-    public function actionOpen()
+    public function actionOpen(Server $sw, $request)
     {
-        return 'hello world';
+        var_dump($request->fd);
     }
 
     public function actionMessage()
