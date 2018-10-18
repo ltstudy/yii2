@@ -9,7 +9,7 @@ require(__DIR__ . '/vendor/autoload.php');
 $config = [
     'class'=>'tsingsun\swoole\server\WebSocketServer',
     'serverType'=>'websocket',
-    'port'=>9502,
+    'port' => 9502,
     'setting' => [
         'daemonize'=>0,
         'worker_num'=>1,
