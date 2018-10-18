@@ -37,7 +37,6 @@ Server::run($config,function (Server $server){
         $bootstrap->appConfig = $config;
     };
 
-    var_dump($starter->init);
     $starter->formatData = function ($data) {
 
         if($data instanceof \yii\web\ForbiddenHttpException){
@@ -47,6 +46,7 @@ Server::run($config,function (Server $server){
         }
         return json_encode($data);
     };
+    var_dump($starter->formatData );
     $server->bootstrap = $starter;
 //    $server->getSwoole()->
     $server->start();
