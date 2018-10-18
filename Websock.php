@@ -14,8 +14,8 @@ $config = [
         'daemonize'=>0,
         'worker_num'=>1,
     ],
-    'pid_file' => __DIR__ . '/console/runtime/testHttp.pid',
-    'log_file' => __DIR__ . '/console/runtime/logs/swoole.log',
+//    'pid_file' => __DIR__ . '/console/runtime/testHttp.pid',
+//    'log_file' => __DIR__ . '/console/runtime/logs/swoole.log',
 ];
 
 
