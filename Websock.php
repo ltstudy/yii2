@@ -24,10 +24,10 @@ $config = [
 
 Server::run($config,function (Server $server){
     $starter = new \tsingsun\swoole\bootstrap\WebSocketApp($server);
-    var_dump($server);
+
     //初始化函数独立,为了在启动时,不会加载Yii相关的文件,在库更新时采用reload平滑启动服务器
     $starter->init = function ($bootstrap) {
-        require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
+        require(__DIR__ . '/vendor/tsingsun/yii2-swoole/src/Yii.php');
 
         $config = \yii\helpers\ArrayHelper::merge(
             require(__DIR__ . '/console/config/main.php'),
