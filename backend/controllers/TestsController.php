@@ -1,7 +1,7 @@
 <?php
 namespace backend\controllers;
 
-use tsingsun\swoole\server\Server;
+//use tsingsun\swoole\server\Server;
 use Yii;
 use yii\web\Controller;
 
@@ -35,7 +35,8 @@ Class TestsController extends Controller {
      */
     public function actionOpen()
     {
-        var_dump($this);
+       $server = new Server();
+       var_dump($server);
     }
 
     public function actionMessage()
