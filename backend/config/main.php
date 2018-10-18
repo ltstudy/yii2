@@ -48,7 +48,20 @@ return [
                 '/m-api/' => '/meanpan-api/index', // 默认index
                 '/mp-api/<action>' => '/meanpan-api/<action>',   // /mp-api/*==>/meanpan-api/*
             ],
-        ]
+        ],
+
+        'class'=>'tsingsun\swoole\server\HttpServer',
+        'setting' => [
+            'daemonize'=>1,
+            'reactor_num'=>1,
+            'worker_num'=>1,
+            'pid_file' => __DIR__ . '/console/runtime/testHttp.pid',
+            'log_file' => __DIR__ . '/console/runtime/logs/swoole.log',
+            'debug_mode'=> 1,
+            'user'=>'tsingsun',
+            'group'=>'staff',
+        ],
+
 
         /*
         'urlManager' => [
