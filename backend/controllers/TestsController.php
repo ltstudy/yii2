@@ -11,6 +11,7 @@ Class TestsController extends Controller {
     public $serv;
     const  HOST = "0.0.0.0";
     const  PORT = "9501";
+
     public function init()
     {
         \Yii::$app->user->enableSession = false;
@@ -32,9 +33,9 @@ Class TestsController extends Controller {
      *
      * @return string
      */
-    public function actionOpen($request)
+    public function actionOpen()
     {
-        var_dump($request);
+        var_dump($this);
     }
 
     public function actionMessage()
