@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
 
+use tsingsun\swoole\server\Server;
 use Yii;
 use yii\web\Controller;
 
@@ -28,13 +29,14 @@ Class TestsController extends Controller {
      *
      * @return string
      */
-    public function actionOpen()
+    public function actionOpen($request)
     {
-        return 'hello';
+        return "来自的:{$request->fd}数据";
     }
 
-    public function actionMessage()
+    public function actionMessage($frame)
     {
+
         return rand(100,1000);
     }
 
